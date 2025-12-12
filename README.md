@@ -37,3 +37,21 @@ From the project root:
 ```bash
 ./mvnw clean compile
 ./mvnw exec:java -Dexec.mainClass="org.skypay.hotelreservationsystem.Main"
+```
+### Screenshot of the result output of the testcases
+
+![img.png](img.png)
+
+### Answer to the bonus Question 1
+
+Suppose we put all the functions inside the same Service. Is this recommended?
+
+For this small test project it’s acceptable and keeps the code simple.
+
+For a real application no it’s not recommended.
+
+One Service mixes room management, user management, booking rules, and printing.
+
+That makes the code harder to maintain, test, and evolve.
+
+In a real system, it would be better to split the services each with a single responsibility.
